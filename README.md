@@ -36,7 +36,8 @@ https://your-render-url.onrender.com
 
 ## ▶️ How to Run Locally
 ```bash
-git clone https://github.com/your-username/DSA-Playground.git
+git clone https://github.com/2310040040/DSA-Playground.git
 cd DSA-Playground
 pip install -r requirements.txt
 python app.py
+
