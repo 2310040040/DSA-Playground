@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DSA Playground</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>DSA Playground</h1>
+
+    <ul>
+    {% for topic,items in problems.items() %}
+        <li><b>{{ topic }}</b>
+            <ul>
+            {% for p in items %}
+                <li><a href="/run/{{topic}}/{{p}}">{{ p }}</a></li>
+            {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

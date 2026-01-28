@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>{{ name }}</h2>
+
+<hr>
+
+<h3>Problem Description</h3>
+{% if desc %}
+  <pre>{{ desc }}</pre>
+{% else %}
+  <p><i>Description not available.</i></p>
+{% endif %}
+
+<hr>
+
+<h3>Enter Input</h3>
+<form method="post">
+  <input type="text"
+         name="user_input"
+         value="{{ user_input }}"
+         placeholder="Follow input format shown above">
+  <br><br>
+  <button type="submit">Run</button>
+</form>
+
+<hr>
+
+<h3>Output</h3>
+
+{% if output %}
+  {% if "Error" in output or "Invalid" in output %}
+    <pre class="error">{{ output }}</pre>
+  {% else %}
+    <pre class="success">{{ output }}</pre>
+  {% endif %}
+{% else %}
+  <p><i>No output yet.</i></p>
+{% endif %}
+
+<br>
+<a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>
